@@ -1,4 +1,6 @@
 <?php
+    $login = 0;
+    $invalid = 0;
 
     //checks whether the data being passed is using post method
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -15,12 +17,11 @@
             // checking if user already exists
             $num = mysqli_num_rows($result);
             if ($num>0) {
-                echo "Login successful";
-                // $user = 1;
+                // echo "Login successful";
+                $login = 1;
             }else {
-
-                echo "Invalid data";
-              
+                // echo "Invalid data";
+                $invalid = 1;
             }
         }
         
@@ -39,6 +40,25 @@
   </head>
   <body>
 
+  <?php
+    if ($login) {
+        echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Comrade </strong>Welcome you are logged in.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>';
+    }
+  
+  ?>
+
+<?php
+    if ($invalid) {
+        echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Comrade </strong>Something went wrong.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>';
+    }
+  
+  ?>
     <h1 class="text-center" >Login Page</h1>
     <div class="container">
     <form class="mt-5" action="login.php" method="post">
