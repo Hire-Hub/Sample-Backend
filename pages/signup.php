@@ -1,4 +1,7 @@
 <?php
+
+    $success = 0;
+    $user = 0;
     //checks whether the data being passed is using post method
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         include 'connect.php';
@@ -14,12 +17,14 @@
             // checking if user already exists
             $num = mysqli_num_rows($result);
             if ($num>0) {
-                echo "User already exists";
+                // echo "User already exists";
+                $user = 1;
             }else {
                 $sql = "insert into `registration`(username,password) values ('$username', '$password')";
                 $result = mysqli_query($con,$sql);
                 if ($result) {
-                    echo "created successfully";
+                    // echo "created successfully";
+                    $success = 1;
                 }
                 else{
                     die(mysqli_error($con));
@@ -41,6 +46,24 @@
     <title>Signup page</title>
   </head>
   <body>
+  <?php
+    if ($user) {
+        echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Comrade </strong>There is already another you here.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>';
+    }
+  
+  ?>
+   <?php
+    if ($success) {
+        echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Comrade </strong>Welcome aboard.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>';
+    }
+  
+  ?>
     <h1 class="text-center" >Sign Up Page</h1>
     <div class="container">
     <form class="mt-5" action="signup.php" method="post">
@@ -59,4 +82,5 @@
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
+
 </html>
