@@ -59,8 +59,7 @@
         </div>
       </nav>
 
-    <div class="container">
-    </div>
+  
     <!-- <h1 class="text-center my-3">Welcome 
         <?php
             // echo $_SESSION['username'];
@@ -68,7 +67,21 @@
     </h1> -->
 
     <!-- employer section -->
-    <div class="container-fluid" id="employer-section">
+    <?php
+        $sql = "Select * from `registration`";
+        $result = mysqli_query($con,$sql);
+
+        if ($result) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $username = $row['username'];
+                echo 
+                '
+                    <h2>'.$username.'</h2>
+                ';
+            }
+        }
+    ?>
+    <div class="container-fluid my-5" id="employer-section">
       <div class="row p-2">
         <div class="col-md-4" id="image-card">
           <img src="/images/profile4.png" alt="" class="img-fluid m-2" id="image">
@@ -84,9 +97,9 @@
           </ul>
           <div class="mt-2">
             <a href="#" class="btn btn-outline-primary"> <i class="fa-brands fa-whatsapp"></i> </a>
-            <a href="#" class="btn btn-outline-secondary"><i class="fa-brands fa-linkedin-in"></i> </a>
-            <a href="#" class="btn btn-outline-danger"><i class="fa-brands fa-facebook"></i> </a>
-            <a href="#" class="btn btn-outline-warning"><i class="fa-brands fa-twitter"></i> </a>
+            <a href="#" class="btn btn-outline-primary"><i class="fa-brands fa-linkedin-in"></i> </a>
+            <a href="#" class="btn btn-outline-primary"><i class="fa-brands fa-facebook"></i> </a>
+            <a href="#" class="btn btn-outline-primary"><i class="fa-brands fa-twitter"></i> </a>
           </div>
         </div>
       </div>
