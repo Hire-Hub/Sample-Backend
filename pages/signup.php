@@ -1,5 +1,24 @@
 <?php
-    
+    //checks whether the data being passed is using post method
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        include 'connect.php';
+
+         $username = $_POST['username'];
+         $password = $_POST['password'];
+
+        //creating query for inserting data into variables
+        $sql = "insert into `registration` (username,password) values ('$username','$password')";
+        $result = mysqli_query($con,$sql);
+
+        if ($result) {
+            echo "user successfully created";
+        }
+        else {
+            die(mysqli_error($con));
+        }
+    }
+
+
 ?> 
 
 <!doctype html>
@@ -21,7 +40,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" placeholder="Enter your password" name="passwoed">
+            <input type="password" class="form-control" placeholder="Enter your password" name="password">
         </div>
         
         <button type="submit" class="btn btn-primary">Submit</button>
