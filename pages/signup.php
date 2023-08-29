@@ -25,6 +25,7 @@
                 if ($result) {
                     // echo "created successfully";
                     $success = 1;
+                    header('location:login.php');
                 }
                 else{
                     die(mysqli_error($con));
@@ -76,7 +77,8 @@
             <input type="password" class="form-control" placeholder="Enter your password" name="password">
         </div>
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Signup</button>
+        <p class="mt-3">Already have an account? <a href="login.php">Click here</a></p>
     </form>
     </div>
   
