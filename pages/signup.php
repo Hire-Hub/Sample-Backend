@@ -76,7 +76,7 @@
             <input type="password" class="form-control" placeholder="Enter your password" name="password">
         </div>
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Signup</button>
     </form>
     </div>
   
