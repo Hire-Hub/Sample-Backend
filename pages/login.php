@@ -19,6 +19,9 @@
             if ($num>0) {
                 // echo "Login successful";
                 $login = 1;
+                session_start();
+                $_SESSION['username']=$username;
+                header('location:index.php');
             }else {
                 // echo "Invalid data";
                 $invalid = 1;
@@ -59,7 +62,7 @@
     }
   
   ?>
-    <h1 class="text-center" >Login Page</h1>
+    <h1 class="text-center my-3" >Login Page</h1>
     <div class="container">
     <form class="mt-5" action="login.php" method="post">
         <div class="mb-3">
