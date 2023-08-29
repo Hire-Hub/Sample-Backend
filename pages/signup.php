@@ -7,15 +7,41 @@
          $password = $_POST['password'];
 
         //creating query for inserting data into variables
-        $sql = "insert into `registration` (username,password) values ('$username','$password')";
-        $result = mysqli_query($con,$sql);
+        // $sql = "insert into `registration` (username,password) values ('$username','$password')";
+        // $result = mysqli_query($con,$sql);
 
-        if ($result) {
-            echo "user successfully created";
+        // if ($result) {
+        //     echo "user successfully created";
+        // }
+        // else {
+        //     die(mysqli_error($con));
+        // }
+
+        $sql = "Select * from `registration` where 
+        username='$username'";
+
+        $result = mysqli_query($con,$sql);
+         if ($result) {
+            // checking if user already exists
+            $num = mysqli_num_rows($result);
+            if ($num>0) {
+                echo "User already exists";
+            }
         }
         else {
-            die(mysqli_error($con));
+            //creating a new user if not found
+
+            // creating query for inserting data into variables
+            $sql = "insert into `registration` (username,password) values ('$username','$password')";
+            $result = mysqli_query($con,$sql);
+            if ($result) {
+                echo "Signup successful";
+            }
+            else {
+                die(mysqli_error($con));
+            }
         }
+            
     }
 
 
