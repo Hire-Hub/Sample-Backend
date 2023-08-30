@@ -74,36 +74,36 @@
         if ($result) {
             while ($row = mysqli_fetch_assoc($result)) {
                 $username = $row['username'];
-                echo 
-                '
-                    <h2>'.$username.'</h2>
-                ';
             }
+            echo 
+            '
+            <div class="container-fluid my-5" id="employer-section">
+            <div class="row p-2">
+              <div class="col-md-4" id="image-card">
+                <img src="/images/profile4.png" alt="" class="img-fluid m-2" id="image">
+              </div>
+              <div class="col-md-8">
+                <h2>Bruce Wayne</h2>
+                <h4>Web Developer</h4>
+                <ul class="list-group">
+                  <li class="list-group-item">'.$username.'</li>
+                  <li class="list-group-item">Phone: +237 692742945</li>
+                  <li class="list-group-item">Company: JobHunt</li>
+                  <li class="list-group-item">Location: City, Country</li>
+                </ul>
+                <div class="mt-2">
+                  <a href="#" class="btn btn-outline-primary"> <i class="fa-brands fa-whatsapp"></i> </a>
+                  <a href="#" class="btn btn-outline-primary"><i class="fa-brands fa-linkedin-in"></i> </a>
+                  <a href="#" class="btn btn-outline-primary"><i class="fa-brands fa-facebook"></i> </a>
+                  <a href="#" class="btn btn-outline-primary"><i class="fa-brands fa-twitter"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+            ';
         }
     ?>
-    <div class="container-fluid my-5" id="employer-section">
-      <div class="row p-2">
-        <div class="col-md-4" id="image-card">
-          <img src="/images/profile4.png" alt="" class="img-fluid m-2" id="image">
-        </div>
-        <div class="col-md-8">
-          <h2>Bruce Wayne</h2>
-          <h4>Web Developer</h4>
-          <ul class="list-group">
-            <li class="list-group-item">Email: bruce@example.com</li>
-            <li class="list-group-item">Phone: +237 692742945</li>
-            <li class="list-group-item">Company: JobHunt</li>
-            <li class="list-group-item">Location: City, Country</li>
-          </ul>
-          <div class="mt-2">
-            <a href="#" class="btn btn-outline-primary"> <i class="fa-brands fa-whatsapp"></i> </a>
-            <a href="#" class="btn btn-outline-primary"><i class="fa-brands fa-linkedin-in"></i> </a>
-            <a href="#" class="btn btn-outline-primary"><i class="fa-brands fa-facebook"></i> </a>
-            <a href="#" class="btn btn-outline-primary"><i class="fa-brands fa-twitter"></i> </a>
-          </div>
-        </div>
-      </div>
-    </div>
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
