@@ -11,7 +11,7 @@
     
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid" id="container">
-          <a class="navbar-brand text-primary" id="navbar-brand" href="/components/home/index.html">JobHunt</a>
+          <a class="navbar-brand text-primary" id="navbar-brand" href="../pages/landing.php">JobHunt</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
