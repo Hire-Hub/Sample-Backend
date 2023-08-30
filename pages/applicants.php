@@ -35,7 +35,60 @@
         </div>
       </nav>
 
+      <div class="container">
+            <h2 class="text-center my-3">Applicants</h2>
+            <div class="row">
+              <!-- Student Cards -->
+              <div class="col-md-4">
+                <div class="card mb-4">
+                  <img src="" class="card-img-top" alt="Profile Picture">
+                  <div class="card-body">
+                    <h5 class="card-title">John Doe</h5>
+                    <p class="card-text">Skills: HTML, CSS, JavaScript</p>
+                    <p class="card-text">Experience: 2 years</p>
+                    <a href="">
+                      <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalJohnDoe">View Profile</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
 
+              <div class="col-md-4">
+                <div class="card mb-4">
+                  <img src="/images/interns/profile2.png" class="card-img-top" alt="Profile Picture">
+                  <div class="card-body">
+                    <h5 class="card-title">John Doe</h5>
+                    <p class="card-text">Skills: HTML, CSS, JavaScript</p>
+                    <p class="card-text">Experience: 2 years</p>
+                   <a href="">
+                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalJohnDoe">View Profile</button>
+                   </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card mb-4">
+                  <img src="/images/interns/profile1.png" class="card-img-top" alt="Profile Picture">
+                  <div class="card-body">
+                    <h5 class="card-title">Jane Smith</h5>
+                    <p class="card-text">Skills: Python, Java, SQL</p>
+                    <p class="card-text">Experience: 3 years</p>
+                    <a href="">
+                      <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalJohnDoe">View Profile</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Add more student cards as needed -->
+            </div>
+          </div>
+
+      <div class="footer mt-2 text-center">
+            <footer>
+                <p> <span id="year"> </span> © JobHunt. All rights reserved</p>
+            </footer>
+        </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
