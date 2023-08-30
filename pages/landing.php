@@ -36,7 +36,7 @@
         </div>
       </nav>
 
-      <div class="container-fluid" id="employer-section">
+      <div class="container my-5" id="employer-section">
       <div class="row p-2">
         <div class="col-md-5" id="image-card">
           <img src="./images/istockphoto-1347257920-1024x1024.jpg" alt="" class="img-fluid m-2" id="image">
@@ -74,6 +74,12 @@
             </div>
       </div>
       
+      <div class="footer my-3 text-center">
+            <footer>
+                <p> <span id="year"> </span> © JobHunt. All rights reserved</p>
+            </footer>
+        </div>
+
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
