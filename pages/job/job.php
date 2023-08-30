@@ -42,7 +42,7 @@
                 <input type="text" class="form-control" placeholder="Enter name of the job here" name="postname">
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Description</label><br>
+                <label class="form-label">Description</label><br>
                 <!-- <textarea name="" id="" cols="100" rows="10"></textarea> -->
                 <input type="text" class="form-control" placeholder="Enter the job description" name="description">
             </div>
@@ -50,9 +50,12 @@
                 <label class="form-label">Company Phone Number</label>
                 <input type="number" class="form-control" placeholder="+123 456 789" name="mobile">
             </div>
-            
-            <button type="submit" class="btn btn-primary">Signup</button>
-            <p class="mt-3">Already have an account? <a href="login.php">Click here</a></p>
+            <div class="mb-3">
+                <label class="form-label">Location</label>
+                <input type="text" class="form-control" placeholder="Yaounde" name="location">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create</button>
         </form>
       </div>
 
