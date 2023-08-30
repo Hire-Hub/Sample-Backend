@@ -30,7 +30,7 @@
                 <a class="nav-link active" id="text" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" id="text" aria-current="page" href="/components/intern/intern.html">Interns</a>
+                <a class="nav-link active" id="text" aria-current="page" href="applicants.php">Applicants</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" id="text" aria-current="page" href="#">About</a>
@@ -96,7 +96,7 @@
 
             <!-- job section -->
           <div class="container mt-5">
-              <h2 class="text text-primary">Previous Jobs</h2>
+              <h2 class="text text-primary text-center my-3">Previous Jobs</h2>
               <div class="row">
                 <!-- Job Cards -->
                 <div class="col-md-4">

@@ -43,7 +43,7 @@
                 <a class="nav-link active" id="text" aria-current="page" href="index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" id="text" aria-current="page" href="/components/intern/intern.html">Interns</a>
+                <a class="nav-link active" id="text" aria-current="page" href="applicants.php">Applicants</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" id="text" aria-current="page" href="#">About</a>
