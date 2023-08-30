@@ -14,7 +14,7 @@
     <title>Welcome page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e9f64432b6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href=/styles/index.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
 
@@ -77,18 +77,18 @@
             ';
         }
     ?>
-    <div class="container-fluid my-5" id="employer-section">
+         <div class="container-fluid my-5" id="employer-section">
             <div class="row p-2">
               <div class="col-md-2" id="image-card">
                 <img src="/images/profile4.png" alt="" class="img-fluid m-2" id="image">
               </div>
               <div class="col-md-8">
                 <ul class="list-group">
-                  <!-- <li class="list-group-item">
+                  <li class="list-group-item">
                     <?php
                       echo $_SESSION['username'];
                     ?>
-                   </li> -->
+                   </li>
                    <?php
                       $sql = "Select * from `registration`";
                       $result = mysqli_query($con,$sql);
@@ -111,7 +111,43 @@
               </div>
             </div>
           </div>
+
+          <div class="container mt-5">
+              <h2 class="text text-primary">Previous Jobs</h2>
+              <div class="row">
+                <!-- Job Cards -->
+                <div class="col-md-4">
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h5 class="card-title">UI/UX Designer</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, veritatis?</p>
+                      <button class="btn btn-success btn-sm">Available</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h5 class="card-title">Data Scientist</h5>
+                      <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe odit dolorum culpa quam possimus? Architecto!</p>
+                      <button class="btn btn-danger btn-sm">Taken</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Add more job cards as needed -->
+              </div>
+            
+              <!-- Create New Job Button -->
+              <div class="text-center">
+                <a href="job/job.php" class="btn btn-primary">Create New Job</a>
+              </div>
+          </div>
   
+          <div class="footer my-3 text-center">
+            <footer>
+                <p> <span id="year"> </span> © JobHunt. All rights reserved</p>
+            </footer>
+        </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
