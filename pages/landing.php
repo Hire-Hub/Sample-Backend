@@ -6,6 +6,7 @@
     <title>Welcome page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e9f64432b6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/landing.css">
 </head>
 <body>
 
@@ -35,25 +36,22 @@
         </div>
       </nav>
 
-      <div class="container">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                    <img src="..." class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                    </div>
-                </div>
+      <div class="container-fluid" id="employer-section">
+      <div class="row p-2">
+        <div class="col-md-5" id="image-card">
+          <img src="./images/istockphoto-1347257920-1024x1024.jpg" alt="" class="img-fluid m-2" id="image">
+        </div>
+        <div class="col-md-7">
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quisquam incidunt earum, asperiores enim, reiciendis, nostrum iste esse 
+            similique praesentium minima voluptatem? Ipsa, sunt  ut maiores et accusantium commodi?</h2>
+            <a href="" class="btn btn-primary">Create Job</a>
         </div>
       </div>
+    </div>
 
-      <div class="container">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="container my-4" id="carousel">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="max-width: 1000px;" >
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                     <img src="https://picsum.photos/id/237/200" class="d-block w-100" alt="...">
