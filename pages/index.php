@@ -121,7 +121,7 @@
             
               <!-- Create New Job Button -->
               <div class="text-center">
-                <a href="job/job.php" class="btn btn-primary">Create New Job</a>
+                <a href="job.php" class="btn btn-primary">Create New Job</a>
               </div>
           </div>
   

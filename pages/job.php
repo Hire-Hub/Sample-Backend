@@ -1,3 +1,25 @@
+<?php
+    // $con = mysqli_connect("localhost", "root", "", "signupforms");
+    include 'connect.php';
+
+    if (isset($_POST['submit'])) {
+      $postname = $_POST['postname'];
+      $description = $_POST['description'];
+      $mobile = $_POST['mobile'];
+      $location = $_POST['location'];
+
+      $sql = "INSERT INTO `post-table` (postname, description, mobile, location) VALUES ('$postname', '$description', '$mobile', '$location')";
+      $result = mysqli_query($con, $sql);
+
+      if ($result) {
+          echo "Data inserted successfully";
+          // header('location:company.php');
+      }
+      else{
+          die(mysqli_error($con));
+      }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +77,7 @@
                 <input type="text" class="form-control" placeholder="Yaounde" name="location">
             </div>
 
-            <button type="submit" class="btn btn-primary">Create</button>
+            <button type="submit" class="btn btn-primary" name="submit">Create</button>
         </form>
       </div>
 
