@@ -8,6 +8,7 @@
 
          $username = $_POST['username'];
          $password = $_POST['password'];
+         $mobile = $_POST['mobile'];
 
         $sql = "Select * from `registration` where 
         username='$username'";
@@ -20,7 +21,7 @@
                 // echo "User already exists";
                 $user = 1;
             }else {
-                $sql = "insert into `registration`(username,password) values ('$username', '$password')";
+                $sql = "insert into `registration`(username,password,mobile) values ('$username', '$password', '$mobile')";
                 $result = mysqli_query($con,$sql);
                 if ($result) {
                     // echo "created successfully";
@@ -75,6 +76,10 @@
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
             <input type="password" class="form-control" placeholder="Enter your password" name="password">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="number" class="form-control" placeholder="+123 456 789" name="mobile">
         </div>
         
         <button type="submit" class="btn btn-primary">Signup</button>
