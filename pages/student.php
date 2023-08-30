@@ -10,6 +10,7 @@
     <title>Home Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e9f64432b6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -39,6 +40,30 @@
         </div>
       </nav>
 
+      <?php
+        $sql = "Select * from `post-table`";
+        $result = mysqli_query($con,$sql);
+
+        if ($result) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $postname = $row['postname'];
+                $description = $row['description'];
+
+                echo 
+                    '
+                    <div class="col-md-4" id="card">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">'.$postname.'</h5>
+                                <p class="card-text">'.$description.'</p>
+                            </div>
+                        </div>
+                    </div>
+                    ';
+            }
+            
+        }
+    ?>
     
 </body>
 </html>
