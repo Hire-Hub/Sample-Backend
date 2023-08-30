@@ -12,8 +12,8 @@
       $result = mysqli_query($con, $sql);
 
       if ($result) {
-          echo "Data inserted successfully";
-          // header('location:company.php');
+          // echo "Data inserted successfully";
+          header('location:index.php');
       }
       else{
           die(mysqli_error($con));
@@ -40,7 +40,7 @@
           <div class="collapse navbar-collapse px-5" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" id="text" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" id="text" aria-current="page" href="index.php">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" id="text" aria-current="page" href="/components/intern/intern.html">Interns</a>

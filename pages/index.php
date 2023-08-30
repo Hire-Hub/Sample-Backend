@@ -94,6 +94,7 @@
             </div>
           </div>
 
+            <!-- job section -->
           <div class="container mt-5">
               <h2 class="text text-primary">Previous Jobs</h2>
               <div class="row">
@@ -116,6 +117,32 @@
                     </div>
                   </div>
                 </div>
+
+                <?php
+                    $sql = "Select * from `post-table`";
+                    $result = mysqli_query($con,$sql);
+
+                    if ($result) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            // $username = $row['username'];
+                            $postname = $row['postname'];
+                            $description = $row['description'];
+                        }
+                        echo 
+                        '
+                         <div class="col-md-4">
+                            <div class="card mb-4">
+                              <div class="card-body">
+                                <h5 class="card-title">'.$postname.'</h5>
+                                <p class="card-text">'.$description.'</p>
+                                <button class="btn btn-success btn-sm">Available</button>
+                              </div>
+                            </div>
+                          </div>
+                        ';
+                    }
+                ?>
+               
                 <!-- Add more job cards as needed -->
               </div>
             
