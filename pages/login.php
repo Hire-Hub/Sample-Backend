@@ -22,7 +22,7 @@
                 $login = 1;
                 session_start();
                 $_SESSION['username']=$username;
-                header('location:index.php');
+                header('location:company.php');
             }else {
                 // echo "Invalid data";
                 $invalid = 1;
