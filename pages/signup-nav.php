@@ -35,7 +35,7 @@
         </div>
       </nav>
     
-            <h2 class="text-center" >Sign Up page</h2>
+            <h2 class="text-center my-3" >Sign Up page</h2>
     <div class="container">
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -46,7 +46,7 @@
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
-            <form class="mt-5" action="signup.php" method="post">
+            <form class="mt-5" action="signup-nav.php" method="post">
                 <div class="mb-3">
                     <label class="form-label">Name</label>
                     <input type="text" class="form-control"  placeholder= "Enter your name"  name="username">
@@ -71,30 +71,30 @@
 
             <!-- student signup page -->
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                 <form class="mt-5" action="signup.php" method="post">
-                <div class="mb-3">
-                    <label class="form-label">Name</label>
-                    <input type="text" class="form-control"  placeholder= "Enter your name"  name="username">
-                </div>
+                 <form class="mt-5" action="signup-nav.php" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control"  placeholder= "Enter your name"  name="username">
+                    </div>
 
-                <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-control" placeholder="Enter your email here" name="email">
-                </div>
-               
-                <div class="mb-3">
-                    <label class="form-label">Phone Number</label>
-                    <input type="number" class="form-control" placeholder="+123 456 789" name="mobile">
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="Enter your email here" name="email">
+                    </div>
                 
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" placeholder="Enter your password" name="password">
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label">Phone Number</label>
+                        <input type="number" class="form-control" placeholder="+123 456 789" name="mobile">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter your password" name="password">
+                    </div>
 
-                <button type="submit" class="btn btn-primary">Signup</button>
-                <p class="mt-3">Already have an account? <a href="login.php">Click here</a></p>
-            </form>
+                    <button type="submit" class="btn btn-primary">Signup</button>
+                    <p class="mt-3">Already have an account? <a href="login.php">Click here</a></p>
+                </form>
             </div>
         </div>
     </div>
