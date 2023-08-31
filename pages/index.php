@@ -67,6 +67,7 @@
               <div class="col-md-8">
                 <ul class="list-group">
                   <li class="list-group-item">
+                    Name: 
                     <?php
                       echo $_SESSION['username'];
                     ?>
@@ -78,16 +79,19 @@
                       if ($result) {
                           while ($row = mysqli_fetch_assoc($result)) {
                               $mobile = $row['mobile'];
+                              $companyname = $row['companyname'];
+                              // $location = $row['location'];
                           }
                           echo 
                           '
-                          <li class="list-group-item">'.$mobile.'</li>
+                          <li class="list-group-item">Phone number: '.$mobile.'</li>
+                          <li class="list-group-item">Company: '.$companyname.'</li>
+                          <li class="list-group-item">Location: City, Country</li>
+
                           ';
                       }
                     ?>
                   
-                  <li class="list-group-item">Company: JobHunt</li>
-                  <li class="list-group-item">Location: City, Country</li>
                 </ul>
                
               </div>

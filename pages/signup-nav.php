@@ -1,3 +1,44 @@
+<?php
+
+    $success = 0;
+    $user = 0;
+    //checks whether the data being passed is using post method
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        include 'connect.php';
+
+         $username = $_POST['username'];
+         $password = $_POST['password'];
+         $mobile = $_POST['mobile'];
+         $companyname = $_POST['companyname'];
+
+        $sql = "Select * from `registration` where 
+        username='$username'";
+
+        $result = mysqli_query($con,$sql);
+         if ($result) {
+            // checking if user already exists
+            $num = mysqli_num_rows($result);
+            if ($num>0) {
+                // echo "User already exists";
+                $user = 1;
+            }else {
+                $sql = "insert into `registration`(username,password,mobile,companyname) values ('$username', '$password', '$mobile', '$companyname')";
+                $result = mysqli_query($con,$sql);
+                if ($result) {
+                    // echo "created successfully";
+                    $success = 1;
+                    header('location:login.php');
+                }
+                else{
+                    die(mysqli_error($con));
+                }
+            }
+        }
+        
+    }
+
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,6 +87,7 @@
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
+            <!-- company signup page -->
             <form class="mt-5" action="signup-nav.php" method="post">
                 <div class="mb-3">
                     <label class="form-label">Name</label>
@@ -53,7 +95,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Company Name</label>
-                    <input type="text" class="form-control" placeholder="Enter company's name" name="username">
+                    <input type="text" class="form-control" placeholder="Enter company's name" name="companyname">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
