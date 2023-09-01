@@ -8,6 +8,7 @@
 
          $username = $_POST['username'];
          $password = $_POST['password'];
+         $companyname = $_POST['companyname'];
 
         $sql = "Select * from `registration` 
         where username='$username' and password='$password'";
@@ -21,7 +22,7 @@
                 $login = 1;
                 session_start();
                 $_SESSION['username']=$username;
-                header('location:index.php');
+                header('location:company.php');
             }else {
                 // echo "Invalid data";
                 $invalid = 1;
@@ -64,6 +65,60 @@
   ?>
     <h1 class="text-center my-3" >Login Page</h1>
     <div class="container">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Company</button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Student</button>
+                </div>
+            </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+            <form class="mt-5" action="login.php" method="post">
+                <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control"  placeholder= "Enter your name"  name="username">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Company Name</label>
+                    <input type="text" class="form-control" placeholder="Enter company's name" name="companyname">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" placeholder="Enter your password" name="password">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Login</button>
+                <p class="mt-3">Don't have an account? <a href="signup-nav.php">Click here</a></p>
+            </form>
+            </div>
+
+            <!-- student signup page -->
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                 <form class="mt-5" action="signup-nav.php" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control"  placeholder= "Enter your name"  name="username">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter your password" name="password">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <p class="mt-3">Don't have an account? <a href="signup.php">Click here</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+</html>
+
+<!-- <div class="container">
     <form class="mt-5" action="login.php" method="post">
         <div class="mb-3">
             <label class="form-label">Name</label>
@@ -77,9 +132,4 @@
         <button type="submit" class="btn btn-primary">Login</button>
         <p class="mt-3">Don't have an account? <a href="signup.php">Click here</a></p>
     </form>
-    </div>
-  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-
-</html>
+    </div> -->
